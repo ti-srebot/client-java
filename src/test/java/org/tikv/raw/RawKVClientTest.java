@@ -113,6 +113,7 @@ public class RawKVClientTest {
 
   @Test
   public void batchPutTest() {
+    if (!initialized) return;
     ExecutorService executors = Executors.newFixedThreadPool(200);
     ExecutorCompletionService<Object> completionService =
         new ExecutorCompletionService<>(executors);
